@@ -2,12 +2,10 @@ export * from "./hero/Hero";
 export * from "./hero/data/heroInfo";
 //-----------------------------
 export * from "./header/Header";
-export * from "./header/data/headerLinksData";
-export * from "./header/Burger/Burger";
+// export * from "./header/data/headerLinksData";
+// export * from "./header/Burger/Burger";
 //-----------------------------
 export * from "./about/About";
-export * from "./about/data/aboutImages";
-export * from "./about/data/aboutInfo";
 //-----------------------------
 export * from "./results/Results";
 export * from "./results/data/resultsInfo";

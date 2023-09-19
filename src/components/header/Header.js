@@ -1,6 +1,7 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
-import { Link, headerLinksData, Burger } from "../";
+import { Link } from "../";
+import { headerLinksData, Burger } from "./";
 import "./header.scss";
 
 export const Header = () => {
