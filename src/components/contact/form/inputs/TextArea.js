@@ -26,7 +26,7 @@ export const TextArea = ({
       >
         {contactInfo.inputs.message}
       </label>
-      {messageInput.dirty && messageInput.error && (
+      {messageInput.isDirty && (
         <div className="form__input-error">{messageInput.error}</div>
       )}
     </fieldset>

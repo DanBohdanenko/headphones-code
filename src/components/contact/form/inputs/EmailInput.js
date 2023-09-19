@@ -25,7 +25,7 @@ export const EmailInput = ({ emailInput, setEmailInput, emailValidation }) => {
       >
         {contactInfo.inputs.email}
       </label>
-      {emailInput.dirty && emailInput.error && (
+      {emailInput.isDirty && (
         <div className="form__input-error">{emailInput.error}</div>
       )}
     </fieldset>

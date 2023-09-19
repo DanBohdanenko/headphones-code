@@ -25,7 +25,7 @@ export const NameInput = ({ nameInput, setNameInput, nameValidation }) => {
       >
         {contactInfo.inputs.name}
       </label>
-      {nameInput.dirty && nameInput.error && (
+      {nameInput.isDirty && (
         <div className="form__input-error">{nameInput.error}</div>
       )}
     </fieldset>

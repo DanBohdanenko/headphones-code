@@ -15,38 +15,72 @@ import "./form.scss";
 export const Form = () => {
   const [nameInput, setNameInput] = useState({
     name: "",
-    dirty: true,
+    isDirty: false,
+    isValid: false,
     error: "",
   });
   const [emailInput, setEmailInput] = useState({
     email: "",
-    dirty: false,
+    isDirty: false,
+    isValid: false,
     error: "",
   });
   const [messageInput, setMessageInput] = useState({
     message: "",
-    dirty: false,
+    isDirty: false,
+    isValid: false,
     error: "",
   });
-  const [formValid, setFormValid] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
-    if (emailInput.dirty || nameInput.dirty || messageInput.dirty) {
-      setFormValid(false);
+    if (
+      nameInput.name.length < 1 ||
+      emailInput.email.length < 1 ||
+      messageInput.message.length < 1
+    ) {
+      setIsFormValid(false);
     } else {
-      setFormValid(true);
+      setIsFormValid(true);
     }
   }, [emailInput, nameInput, messageInput]);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const resetStates = () => {
+    setNameInput({
+      name: "",
+      isDirty: false,
+      isValid: false,
+      error: "",
+    });
+    setEmailInput({
+      name: "",
+      isDirty: false,
+      isValid: false,
+      error: "",
+    });
+    setMessageInput({
+      name: "",
+      isDirty: false,
+      isValid: false,
+      error: "",
+    });
+    setIsFormValid(false);
+    setIsSubmitted(false);
+  };
+
+  const formChecking = (event) => {
     nameValidation(nameInput, setNameInput);
     emailValidation(event, emailInput, setEmailInput);
     messageValidation(messageInput, setMessageInput);
-    if (formValid) {
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    formChecking(event);
+    if (isFormValid) {
       setIsSubmitted(!isSubmitted);
-      setTimeout(() => document.location.reload(), 5000);
+      setTimeout(() => resetStates(), 5000);
     }
   };
 
