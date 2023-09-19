@@ -1,6 +1,6 @@
 import React from "react";
 import "./results.scss";
-import { Typography, typographyTags, Section } from "../common";
+import { Typography, typographyTags, Section, ListElement } from "../common";
 import resultsInfo from "./data/resultsInfo";
 
 export const Results = () => {
@@ -19,7 +19,7 @@ export const Results = () => {
       </div>
       <ul className="results__list">
         {resultsInfo.items.map((item) => (
-          <li key={item.id} className="results__item">
+          <ListElement key={item.id} className="results__item">
             <Typography
               tag={typographyTags.itemTitle}
               className="results__item-title"
@@ -32,7 +32,7 @@ export const Results = () => {
             >
               {item.text}
             </Typography>
-          </li>
+          </ListElement>
         ))}
       </ul>
     </Section>

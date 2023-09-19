@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.scss";
-import { Section, Typography, typographyTags } from "../common";
+import { Section, Typography, typographyTags, ListElement } from "../common";
 import aboutData from "./data/aboutData";
 
 export const About = () => {
@@ -19,7 +19,7 @@ export const About = () => {
       </div>
       <ul className="about__items">
         {aboutData.items.map((item) => (
-          <li key={item.id} className="about__item">
+          <ListElement key={item.id} className="about__item">
             <div className="about__item-img">
               <img src={item.src} alt="about-image" />
             </div>
@@ -32,7 +32,7 @@ export const About = () => {
             <Typography className="about__item-text" tag={typographyTags.text}>
               {item.description}
             </Typography>
-          </li>
+          </ListElement>
         ))}
       </ul>
     </Section>

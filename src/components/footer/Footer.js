@@ -1,7 +1,7 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
 import "./footer.scss";
-import { Link, Typography, typographyTags } from "../common";
+import { Link, ListElement, Typography, typographyTags } from "../common";
 import footerLinksData from "./data/footerLinksData";
 
 export const Footer = () => {
@@ -16,11 +16,11 @@ export const Footer = () => {
             {footerLinksData.map((item) => {
               const Icon = item.img;
               return (
-                <li key={item.platform}>
+                <ListElement key={item.platform}>
                   <Link href={item.url} target="_blank" rel="noreferrer">
                     <Icon className={`footer__icon footer__${item.platform}`} />
                   </Link>
-                </li>
+                </ListElement>
               );
             })}
           </ul>

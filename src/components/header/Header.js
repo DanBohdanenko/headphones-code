@@ -1,6 +1,6 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
-import { Link } from "../common";
+import { Link, ListElement } from "../common";
 import { headerLinksData, Burger } from "./";
 import "./header.scss";
 
@@ -30,7 +30,7 @@ export const Header = () => {
             }
           >
             {headerLinksData.map((item) => (
-              <li key={item.href}>
+              <ListElement key={item.href}>
                 <Link
                   href={item.href}
                   className="header__nav-link"
@@ -38,7 +38,7 @@ export const Header = () => {
                 >
                   {item.children}
                 </Link>
-              </li>
+              </ListElement>
             ))}
           </ul>
         </nav>
