@@ -1,15 +1,24 @@
 import React from "react";
 import "./about.scss";
-import { Typography, Section, aboutImages, aboutInfo } from "../";
+import {
+  Section,
+  aboutImages,
+  aboutInfo,
+  Typography,
+  typographyTags,
+} from "../";
 
 export const About = () => {
   return (
     <Section className="about" id="about">
       <div className="about__body">
-        <Typography variant="h2" className="about__title title">
+        <Typography
+          className="about__title title"
+          tag={typographyTags.sectionTitle}
+        >
           {aboutInfo.title}
         </Typography>
-        <Typography variant="p" className="about__text text">
+        <Typography className="about__text text" tag={typographyTags.text}>
           {aboutInfo.text}
         </Typography>
       </div>
@@ -19,10 +28,13 @@ export const About = () => {
             <div className="about__item-img">
               <img src={aboutImages[item.src]} alt="about-image" />
             </div>
-            <Typography variant="h3" className="about__item-title">
+            <Typography
+              className="about__item-title"
+              tag={typographyTags.itemTitle}
+            >
               {item.title}
             </Typography>
-            <Typography variant="p" className="about__item-text">
+            <Typography className="about__item-text" tag={typographyTags.text}>
               {item.description}
             </Typography>
           </li>

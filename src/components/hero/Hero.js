@@ -1,21 +1,21 @@
 import React from "react";
 import "./hero.scss";
-import { Section, Typography, Link, heroInfo } from "../";
+import { Typography, typographyTags, Section, Link, heroInfo } from "../";
 
 export const Hero = () => {
   return (
     <Section id="hero" className="hero">
       <div className="hero__body">
-        <Typography variant="h1" className="hero__title title">
+        <Typography className="hero__title title" tag={typographyTags.title}>
           {heroInfo.title}
         </Typography>
-        <Typography variant="h3" className="hero__subtitle">
+        <Typography className="hero__subtitle" tag={typographyTags.subtitle}>
           {heroInfo.subtitle}
         </Typography>
         <Link href="#contact" className="hero__button button">
           {heroInfo.button}
         </Link>
-        <Typography variant="p" className="hero__text text">
+        <Typography className="hero__text text" tag={typographyTags.text}>
           {heroInfo.text}
         </Typography>
       </div>

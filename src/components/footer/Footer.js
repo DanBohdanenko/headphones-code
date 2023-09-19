@@ -1,7 +1,7 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
 import "./footer.scss";
-import { Link, Typography, footerLinksData } from "../";
+import { Link, Typography, typographyTags, footerLinksData } from "../";
 
 export const Footer = () => {
   return (
@@ -25,7 +25,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <Typography variant="p">©headphones 2020</Typography>
+      <Typography tag={typographyTags.text}>©headphones 2020</Typography>
     </footer>
   );
 };

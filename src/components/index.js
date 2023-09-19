@@ -27,5 +27,5 @@ export * from "./success/Success";
 //-----------------------------
 export * from "./common/Section";
 export * from "./common/Link";
-export * from "./common/Typography";
 export * from "./common/Button";
+export * from "./common/Typography";
