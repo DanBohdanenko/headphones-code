@@ -12,34 +12,36 @@ export const Header = () => {
   };
   return (
     <header className="header">
-      <nav className="header__navbar">
-        <Link href="#hero">
-          <img src={mainLogo} alt="logo" />
-        </Link>
-        <Burger
-          burgerActive={burgerActive}
-          setBurgerActive={setBurgerActive}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
-        <ul
-          className={
-            burgerActive ? "header__nav-list active" : "header__nav-list"
-          }
-        >
-          {headerLinksData.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="header__nav-link"
-                onClick={closeBurger}
-              >
-                {item.children}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="container">
+        <nav className="header__navbar">
+          <Link href="#hero">
+            <img src={mainLogo} alt="logo" />
+          </Link>
+          <Burger
+            burgerActive={burgerActive}
+            setBurgerActive={setBurgerActive}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
+          <ul
+            className={
+              burgerActive ? "header__nav-list active" : "header__nav-list"
+            }
+          >
+            {headerLinksData.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="header__nav-link"
+                  onClick={closeBurger}
+                >
+                  {item.children}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

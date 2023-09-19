@@ -1,12 +1,13 @@
 import React from "react";
 import "./main.scss";
-import { Hero, About, Results, Contact, Footer } from "./components";
+import { Hero, About, Results, Contact, Footer, Header } from "./components";
 
 function App() {
   return (
     <div>
-      <Hero />
+      <Header />
       <main>
+        <Hero />
         <About />
         <Results />
         <Contact />

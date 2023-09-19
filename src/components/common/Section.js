@@ -1,10 +1,9 @@
 import React from "react";
 
-export const Section = ({ children, id, className, variant }) => {
-  const Tag = variant;
+export const Section = ({ children, id, className }) => {
   return (
-    <Tag id={id} className={className}>
+    <section id={id} className={className}>
       <div className="container">{children}</div>
-    </Tag>
+    </section>
   );
 };

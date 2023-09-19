@@ -4,7 +4,7 @@ import { Typography, Section, resultsInfo } from "../";
 
 export const Results = () => {
   return (
-    <Section className="results" id="results" variant="section">
+    <Section className="results" id="results">
       <div className="results__body">
         <Typography variant="h2" className="results__title title">
           {resultsInfo.title}

@@ -5,7 +5,7 @@ import { Section, Typography } from "../";
 
 export const Success = () => {
   return (
-    <Section className="success" variant="section">
+    <Section className="success">
       <div className="success__body">
         <Typography className="success__title" variant="h4">
           Success!

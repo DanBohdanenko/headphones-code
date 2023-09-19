@@ -1,11 +1,10 @@
 import React from "react";
 import "./hero.scss";
-import { Section, Typography, Link, Header, heroInfo } from "../";
+import { Section, Typography, Link, heroInfo } from "../";
 
 export const Hero = () => {
   return (
-    <Section id="hero" className="hero" variant="section">
-      <Header />
+    <Section id="hero" className="hero">
       <div className="hero__body">
         <Typography variant="h1" className="hero__title title">
           {heroInfo.title}
