@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Success } from "../../";
+import { Button } from "../../common";
 import {
-  Success,
   NameInput,
   EmailInput,
   TextArea,
@@ -8,8 +9,7 @@ import {
   emailValidation,
   messageValidation,
   contactInfo,
-  Button,
-} from "../../";
+} from "../";
 import "./form.scss";
 
 export const Form = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
-import { Link } from "../";
+import { Link } from "../common";
 import { headerLinksData, Burger } from "./";
 import "./header.scss";
 

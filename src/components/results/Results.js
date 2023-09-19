@@ -1,6 +1,7 @@
 import React from "react";
 import "./results.scss";
-import { Typography, typographyTags, Section, resultsInfo } from "../";
+import { Typography, typographyTags, Section } from "../common";
+import resultsInfo from "./data/resultsInfo";
 
 export const Results = () => {
   return (

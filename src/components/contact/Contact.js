@@ -1,6 +1,7 @@
 import React from "react";
 import "./contact.scss";
-import { Typography, typographyTags, Section, Form, contactInfo } from "../";
+import { Typography, typographyTags, Section } from "../common";
+import { Form, contactInfo } from "./";
 
 export const Contact = () => {
   return (

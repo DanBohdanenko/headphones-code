@@ -1,7 +1,8 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
 import "./footer.scss";
-import { Link, Typography, typographyTags, footerLinksData } from "../";
+import { Link, Typography, typographyTags } from "../common";
+import footerLinksData from "./data/footerLinksData";
 
 export const Footer = () => {
   return (

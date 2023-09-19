@@ -1,6 +1,7 @@
 import React from "react";
 import "./hero.scss";
-import { Typography, typographyTags, Section, Link, heroInfo } from "../";
+import { Typography, typographyTags, Section, Link } from "../common";
+import heroInfo from "./data/heroInfo";
 
 export const Hero = () => {
   return (

@@ -1,4 +1,4 @@
-export const heroInfo = {
+const heroInfo = {
   title: "Premium Headphones for True Music Lovers",
   subtitle: "Immerse Yourself in the Ultimate Audio Experience",
   text: `Discover a wide range of premium headphones designed to deliver
@@ -9,3 +9,4 @@ export const heroInfo = {
     purest form of musical pleasure.`,
   button: "Contact us",
 };
+export default heroInfo;

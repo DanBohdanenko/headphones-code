@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import "./success.scss";
-import { Section, Typography, typographyTags } from "../";
+import { Section, Typography, typographyTags } from "../common";
 
 export const Success = () => {
   return (

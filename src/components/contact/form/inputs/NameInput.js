@@ -1,5 +1,5 @@
 import React from "react";
-import { contactInfo } from "../../../";
+import { contactInfo } from "../../";
 
 export const NameInput = ({ nameInput, setNameInput, nameValidation }) => {
   const onChangeName = (event) => {

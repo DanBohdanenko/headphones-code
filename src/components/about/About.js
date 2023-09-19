@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.scss";
-import { Section, Typography, typographyTags } from "../";
+import { Section, Typography, typographyTags } from "../common";
 import aboutData from "./data/aboutData";
 
 export const About = () => {
