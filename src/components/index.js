@@ -1,14 +1,14 @@
-export * from "./hero/Hero";
+export * from "./Hero/Hero";
 //-----------------------------
-export * from "./header/Header";
+export * from "./Header/Header";
 //-----------------------------
-export * from "./about/About";
+export * from "./About/About";
 //-----------------------------
-export * from "./results/Results";
+export * from "./Results/Results";
 //-----------------------------
-export * from "./contact/Contact";
+export * from "./Contact/Contact";
 //-----------------------------
-export * from "./footer/Footer";
+export * from "./Footer/Footer";
 //-----------------------------
-export * from "./success/Success";
+export * from "./Success/Success";
 //-----------------------------
