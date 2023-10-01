@@ -80,10 +80,13 @@ html {
   font-weight: 700;
   border-radius: 22px;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
-  transition: ease 0.5s;
   letter-spacing: 2px;
   &:hover {
-    transform: translateY(3px);
+    background-color: transparent;
+    border: 1px solid #ff6565;
+  }
+  &[type]:hover {
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 

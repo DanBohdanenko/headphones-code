@@ -1,8 +1,8 @@
 import React from "react";
 
-export const ListElement = ({ key, className, children }) => {
+export const ListElement = ({ className, children, count }) => {
   return (
-    <li key={key} className={className}>
+    <li className={className} data-count={count}>
       {children}
     </li>
   );

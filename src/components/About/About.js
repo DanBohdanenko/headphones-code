@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.scss";
 import { Section, Typography, typographyTags, ListElement } from "../common";
 import aboutData from "./data/aboutData";
+import aboutAnimation from "./aboutAnimation";
+import gsap from "gsap";
 
 export const About = () => {
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      aboutAnimation();
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <Section className="about" id="about">
       <div className="about__body">

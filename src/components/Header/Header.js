@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
 import { Link, ListElement } from "../common";
-import { headerLinksData, Burger } from "./";
+import { headerLinksData, Burger, headerAnimation } from "./";
 import "./header.scss";
+import gsap from "gsap";
 
 export const Header = () => {
   const [burgerActive, setBurgerActive] = React.useState(false);
@@ -11,11 +12,18 @@ export const Header = () => {
     setIsOpen(false);
     setBurgerActive(false);
   };
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      headerAnimation();
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <header className="header">
       <div className="container">
         <nav className="header__navbar">
-          <Link href="#hero">
+          <Link href="#hero" className="header__logo">
             <img src={mainLogo} alt="logo" />
           </Link>
           <Burger

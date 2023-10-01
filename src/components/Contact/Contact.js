@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.scss";
 import { Typography, typographyTags, Section } from "../common";
-import { Form, contactInfo } from "./";
+import { Form, contactInfo, contactAnimation } from "./";
+import gsap from "gsap";
 
 export const Contact = () => {
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      contactAnimation();
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <Section className="contact" id="contact">
       <Typography

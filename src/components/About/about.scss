@@ -34,10 +34,13 @@
     height: 76px;
     width: 94px;
     margin: 0 auto 10px auto;
+    perspective: 500px;
   }
   &__item-img img {
     height: 100%;
     width: 100%;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
   }
   &__item-title {
     font-size: 18px;

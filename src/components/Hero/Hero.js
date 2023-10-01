@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./hero.scss";
 import { Typography, typographyTags, Section, Link } from "../common";
 import heroInfo from "./data/heroInfo";
+import { gsap } from "gsap";
+import heroAnimation from "./heroAnimation";
 
 export const Hero = () => {
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      heroAnimation();
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <Section id="hero" className="hero">
       <div className="hero__body">
@@ -16,9 +24,6 @@ export const Hero = () => {
         <Link href="#contact" className="hero__button button">
           {heroInfo.button}
         </Link>
-        <Typography className="hero__text text" tag={typographyTags.text}>
-          {heroInfo.text}
-        </Typography>
       </div>
     </Section>
   );
